@@ -1,28 +1,38 @@
 [*]
 [*] GTKWave Analyzer v3.3.71 (w)1999-2016 BSI
-[*] Sat Jul 23 09:57:13 2016
+[*] Sat Jul 23 23:38:15 2016
 [*]
 [dumpfile] "C:\Users\MDMx\Documents\Verilog\VerilogPlayGround\TB.vcd"
-[dumpfile_mtime] "Sat Jul 23 09:56:57 2016"
-[dumpfile_size] 54154
+[dumpfile_mtime] "Sat Jul 23 23:36:53 2016"
+[dumpfile_size] 27563
 [savefile] "C:\Users\MDMx\Documents\Verilog\VerilogPlayGround\TB.gtkw"
-[timestart] 1053300
+[timestart] 880720
 [size] 1920 1017
 [pos] -1 -1
-*-16.000000 244000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-14.000000 956000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] TB.
+[treeopen] TB.fifo_t.
+[treeopen] TB.lb_m.
 [sst_width] 197
-[signals_width] 142
+[signals_width] 174
 [sst_expanded] 1
 [sst_vpaned_height] 300
+@22
+TB.fifo_t.addr_R[3:0]
+TB.fifo_t.addr_W[3:0]
 @28
-TB.clk
-@24
-TB.interval[31:0]
+TB.fifo_t.clk
+@22
+TB.fifo_t.dataR[31:0]
+TB.fifo_t.dataW[31:0]
+TB.fifo_t.fifo_size[3:0]
 @28
-TB.ready
-TB.pulse
-TB.rst
-@23
-TB.ram_q[7:0]
+TB.fifo_t.r_en
+TB.fifo_t.r_op
+TB.fifo_t.r_ready
+TB.fifo_t.rst
+TB.fifo_t.w_en
+TB.fifo_t.w_op
+TB.fifo_t.w_ready
 [pattern_trace] 1
 [pattern_trace] 0

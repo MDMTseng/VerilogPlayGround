@@ -1,8 +1,10 @@
 // Verilog test bench for example_3_4
 `timescale 1ns/100ps
+
+`include "LightBoat.v"
 `include "PulseIntervalDetector.v"
-`include "single_port_ram.v"
 `include "ram_dual.v"
+`include "FIFO.v"
 
 `define PULSE_STIMULATOR(WIDTH,PULSE)  pulse<=1; #WIDTH pulse<=0;
 
@@ -20,28 +22,41 @@
 module TB;
 
   reg clk,rst,pulse;
+
+
   wire[32-1:0] interval;
-  wire ready;
-  PulseIntervalDetector pulseIntDetector(clk,rst,pulse,interval,ready);
 
-  wire [7:0]ram_q;
-  reg [6:0]addr_ram;
-  wire [6:0]addr_ram_p_1=addr_ram+1;
-  ram_dual ramd(ram_q, addr_ram, addr_ram_p_1,{1'b1, addr_ram}, 1'b1, clk, clk);
+  wire[7:0] errorCode;
+  reg[32-1:0] CCCCCC;
+  LightBoat lb_m(clk,rst,pulse,interval,errorCode);
 
-
-  always@(posedge clk)addr_ram<=addr_ram+1;
+  wire[32-1:0] RRRRRR;
+  reg r_en,w_en;
+  FIFO fifo_t(clk,rst,
+  w_en,w_ready,CCCCCC,r_en,r_ready,RRRRRR,fifo_size);
   always #5 clk<=~clk;
   initial begin
-    addr_ram<=0;
+    CCCCCC<=0;
     clk<=0;
     rst<=1;
+
+    w_en = 1;
+    r_en = 0;
     #20 rst<=0;
     $dumpfile("TB.vcd");
     $dumpvars(0, TB);
+
+    #300 r_en=1;
+    #500 w_en=0;
   end
 
-
+  always@(posedge clk)
+  begin
+    #1
+    //w_en = $random;
+    if(w_en&w_ready)
+      CCCCCC=CCCCCC+1;
+  end
   initial begin
     pulse<=0;
     #130
