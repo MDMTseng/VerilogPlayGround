@@ -1,27 +1,28 @@
 [*]
 [*] GTKWave Analyzer v3.3.71 (w)1999-2016 BSI
-[*] Fri Jul 22 06:42:39 2016
+[*] Sat Jul 23 09:57:13 2016
 [*]
-[dumpfile] "C:\Users\MDMx\Documents\Verilog\tutorial1\TB.vcd"
-[dumpfile_mtime] "Fri Jul 22 06:42:30 2016"
-[dumpfile_size] 951
-[savefile] "C:\Users\MDMx\Documents\Verilog\tutorial1\TB.gtkw"
-[timestart] 0
-[size] 1000 600
+[dumpfile] "C:\Users\MDMx\Documents\Verilog\VerilogPlayGround\TB.vcd"
+[dumpfile_mtime] "Sat Jul 23 09:56:57 2016"
+[dumpfile_size] 54154
+[savefile] "C:\Users\MDMx\Documents\Verilog\VerilogPlayGround\TB.gtkw"
+[timestart] 1053300
+[size] 1920 1017
 [pos] -1 -1
-*0.000000 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-16.000000 244000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [sst_width] 197
-[signals_width] 78
+[signals_width] 142
 [sst_expanded] 1
-[sst_vpaned_height] 153
+[sst_vpaned_height] 300
 @28
-TB.A
-TB.B
-TB.C
-TB.D
-TB.E
-TB.F
-@22
-TB.k
+TB.clk
+@24
+TB.interval[31:0]
+@28
+TB.ready
+TB.pulse
+TB.rst
+@23
+TB.ram_q[7:0]
 [pattern_trace] 1
 [pattern_trace] 0
