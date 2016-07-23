@@ -19,7 +19,7 @@
       "env": {},
       "keystroke": "alt-q",
       "stream": true,
-      "outputTarget": "console",
+      "outputTarget": "panel",
       "outputBufferSize": 800,
       "maxCompleted": 3,
       "autoShowOutput": true,
@@ -41,7 +41,7 @@
     {
       "namespace": "iverilog",
       "action": "vvp",
-      "command": "vvp TB.vvp& gtkwave TB.vcd TB.gtkw|open -a gtkwave TB.vcd TB.gtkw",
+      "command": "vvp TB.vvp&( gtkwave TB.vcd TB.gtkw||open -a gtkwave TB.vcd TB.gtkw)",
       "arguments": [],
       "cwd": "{projectPath}",
       "inputDialogs": [],
